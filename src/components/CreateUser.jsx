@@ -9,7 +9,7 @@ function CreateUser() {
     const mutation = useMutation({
         mutationKey: ["users"],
         mutationFn: (variables) => {
-            return axios.post("http://localhost:3000/users/", variables)
+            return axios.post("http://localhost:3000/users", variables)
         },
         onSuccess: (data, variables, context) => {
             console.log(data, variables, context);
