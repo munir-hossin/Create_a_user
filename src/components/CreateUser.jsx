@@ -38,9 +38,9 @@ function CreateUser() {
     }
 
     return (
-        <div className="">
+        <div >
         <div className="py-4 px-6 border">
-            <h1 className="text-2xl font-bold mb-5">Create a New User</h1>
+            <h1 className="text-xl lg:text-2xl font-bold mb-5">Create a New User</h1>
 
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">

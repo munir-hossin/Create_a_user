@@ -4,22 +4,24 @@ import UserList from './components/UserList';
 import UserDetails from './UserDetails';
 
 function App() {
-  const [selectedUser, setSelectedUser] = useState(null); 
+  const [selectedUser, setSelectedUser] = useState(null);
 
   return (
-    <div className="grid grid-cols-12">
-      <div className="col-span-3 ">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <div className="order-1 lg:order-3 lg:col-span-3 p-4 text-center lg:text-start">
+        <UserDetails user={selectedUser} />
+      </div>
+      
+
+      <div className="order-2 lg:order-2 lg:col-span-6 py-4 lg:px-0 px-3">
+        <div>
+          <UserList onUserSelect={setSelectedUser} />
+        </div>
+      </div>
+      
+      <div className="order-3 lg:order-1 lg:col-span-3 p-4 lg:py-4 lg:px-0">
         <CreateUser />
       </div>
-      <div className="col-span-6 py-4">
-          <div className="border-r">
-            <UserList onUserSelect={setSelectedUser} /> 
-          </div>
-      
-      </div>
-          <div className="col-span-3 pl-3">
-            <UserDetails user={selectedUser} />
-          </div>
     </div>
   );
 }
@@ -42,26 +44,28 @@ export default App;
 
 
 
-// import { useState } from 'react';
-// // import CreateUser from './components/CreateUser';
-// // import UserList from './components/UserList';
-// // import UserDetails from './components/UserDetails';
 
-// // import { Routes, Route } from 'react-router-dom';
+
+
+// import { useState } from 'react';
 // import CreateUser from './components/CreateUser';
 // import UserList from './components/UserList';
 // import UserDetails from './UserDetails';
 
 // function App() {
-//   const [selectedUser, setSelectedUser] = useState(null); // স্টেট সংরক্ষণের জন্য
+//   const [selectedUser, setSelectedUser] = useState(null);
 
 //   return (
-//     <div className="flex">
-//       <div className="w-1/3 p-4 border-r">
+//     <div className="grid grid-cols-1 lg:grid-cols-12">
+//       <div className="lg:col-span-3 p-4">
 //         <CreateUser />
-//         <UserList onSelectUser={setSelectedUser} />
 //       </div>
-//       <div className="w-2/3 p-4">
+//       <div className="lg:col-span-6 py-4">
+//         <div className="border-r">
+//           <UserList onUserSelect={setSelectedUser} />
+//         </div>
+//       </div>
+//       <div className="lg:col-span-3 pl-3 p-4">
 //         <UserDetails user={selectedUser} />
 //       </div>
 //     </div>
@@ -91,109 +95,28 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-// import { Routes, Route } from 'react-router-dom';
+// import { useState } from 'react';
 // import CreateUser from './components/CreateUser';
 // import UserList from './components/UserList';
 // import UserDetails from './UserDetails';
 
-
 // function App() {
+//   const [selectedUser, setSelectedUser] = useState(null); 
+
 //   return (
-//     <div className="flex">
-//       <div className="w-1/3"> {/* Sidebar অংশ */}
+//     <div className="grid grid-cols-12">
+//       <div className="col-span-3 ">
 //         <CreateUser />
 //       </div>
-//       <div className="w-2/3"> {/* Main Content */}
-//         <Routes>
-//           <Route path="/users" element={<UserList />} />
-//           <Route path="/user/:id" element={<UserDetails />} />
-//           <Route path="/" element={<UserList />} />
-//         </Routes>
+//       <div className="col-span-6 py-4">
+//           <div className="border-r">
+//             <UserList onUserSelect={setSelectedUser} /> 
+//           </div>
+      
 //       </div>
-//     </div>
-//   );
-// }
-
-
-// export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Routes, Route } from 'react-router-dom';
-// // import CreateUser from './components/CreateUser';
-// // import UserList from './components/UserList';
-// // import UserDetails from './components/UserDetails';
-// import CreateUser from './components/CreateUser';
-// import UserList from './components/UserList';
-// import UserDetails from './UserDetails';
-
-// function App() {
-//   return (
-//     <div className="flex">
-//       <Routes>
-//         {/* Route to display the User List */}
-//         <Route path="/users" element={<UserList />} />
-
-//         {/* Route to display Create User */}
-//         <Route path="/create-user" element={<CreateUser />} />
-
-//         {/* Route to display User Details, using a dynamic parameter */}
-//         <Route path="/user/:id" element={<UserDetails />} />
-
-//         {/* Default route to User List */}
-//         <Route path="/" element={<UserList />} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-// import { Routes, Route } from 'react-router-dom';
-// import CreateUser from './components/CreateUser';
-// import UserList from './components/UserList';
-// import UserDetails from './UserDetails';
-
-// function App() {
-//   return (
-//     <div className="flex">
-//       <Routes>
-//         <Route path="/users" element={<UserList />} />
-//         {/* <CreateUser /> */}
-//         <Route path="/CreateUser" element={<CreateUser />} />
-//         <Route path="/user/:id" element={<UserDetails />} />
-//         <Route path="/" element={<UserList />} />
-//       </Routes>
+//           <div className="col-span-3 pl-3">
+//             <UserDetails user={selectedUser} />
+//           </div>
 //     </div>
 //   );
 // }
@@ -204,23 +127,6 @@ export default App;
 
 
 
-
-
-// import CreateUser from "./components/CreateUser";
-// import UserList from "./components/UserList";
-// import UserDetails from "./UserDetails";
-
-// function App() {
-//   return (
-//       <div className="flex">
-//         <CreateUser />
-//         <UserList /> 
-//         <UserDetails id={5} />
-//       </div>
-//   );
-// }
-
-// export default App;
 
 
 

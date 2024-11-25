@@ -1,14 +1,14 @@
 function UserDetails({ user }) {
   if (!user) {
-    return <h2 className="text-2xl mt-3 font-bold border-b pb-7 mb-4">User Details</h2>
+    return <h2 className="text-2xl mt-3 font-bold border-b pb-5 pt-2 mb-4">User Details</h2>
   }
 
   return (
     <div >
-      <h2 className="text-2xl font-bold mt-3 border-b pb-7 ">User Details</h2>
-      <p className="text-xl"><strong>Name:</strong> {user.name}</p>
-      <p className="text-xl"><strong>Username:</strong> {user.username}</p>
-      <p className="text-xl"><strong>Email:</strong> {user.email}</p>
+      <h2 className="text-2xl font-bold mt-3 border-b pb-5 pt-2 ">User Details</h2>
+      <p><strong>Name:</strong> {user.name}</p>
+      <p><strong>Username:</strong> {user.username}</p>
+      <p><strong>Email:</strong> {user.email}</p>
     </div>
   );
 }
